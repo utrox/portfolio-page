@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bence Hunyadi | Full Stack Developer</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/48b7cb8bbe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Hero section -->
+    <div class="hero">
+      <div class="canvas-wrapper">
+        <canvas id="hero-canvas"></canvas>
+      </div>
+      <div class="hero-heading">
+        <section class="heading-line">
+          Hello, I'm <span class="highlight">Bence</span>.
+        </section>
+        <section class="heading-line">
+          I'm a full stack developer.<span id="typewriter"></span>
+        </section>
+        <a href="#about" class="hero-button">View my work</a>
+      </div>
+    </div>
+    <!-- Background canvas -->
+    <div class="canvas-wrapper background-canvas">
+      <canvas id="background-canvas"></canvas>
+    </div>
+    <!-- Header -->
+    <header class="sticky-header">
+      <a href="#" class="nav-item">Home</a>
+      <a href="#about" class="nav-item">About</a>
+      <a href="#skills" class="nav-item">Skills</a>
+      <a href="#projects" class="nav-item">Projects</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </header>
+    <div class="content-wrapper">
+      <!-- About section -->
+      <section id="about" class="main-section">
+        <h2 class="section-header animate-on-scroll">About</h2>
+        <div class="temp"></div>
+      </section>
+      <div class="spacer"></div>
+      <!-- Skills section -->
+      <section id="skills" class="main-section">
+        <h2 class="section-header animate-on-scroll">Skills</h2>
+        <ul class="skills-container animate-on-scroll">
+          <li class="single-skill">
+            <i class="fa-brands fa-html5"></i>
+            <p>HTML</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-brands fa-css3-alt"></i>
+            <p>CSS</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-brands fa-js"></i>
+            <p>JavaScript</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-brands fa-python"></i>
+            <p>Python</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-brands fa-node"></i>
+            <p>Node.js</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-brands fa-react"></i>
+            <p>React</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-solid fa-x"></i> <!-- TODO icon -->
+            <p>Django</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-solid fa-database"></i>
+            <p>SQL</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-solid fa-x"></i> <!-- TODO icon -->
+            <p>mongoDB</p>
+          </li>
+          <li class="single-skill">
+            <i class="fa-brands fa-git-alt"></i>
+            <p>git</p>
+          </li>
+        </ul>
+      </section>
+      <div class="spacer"></div>
+      <!-- Projects section -->
+      <section id="projects" class="main-section">
+        <h2 class="section-header animate-on-scroll">Projects</h2>
+        <div class="temp"></div>
+        <!-- <div class="single-project">
+          <section class="project-half left-half">
+              <img
+                src="./projects/project-1-thumbnail.png"
+                data-gif-path="./projects/project-1.gif"
+                data-thumbnail-path="./projects/project-1-thumbnail.png"
+                alt="project-1"
+                class="project-gif"
+              />
+              <img
+                src="./projects/IMac_vector.svg"
+                alt="monitor"
+                class="monitor-svg"
+              />
+          </section>
+          <section class="project-half right-half"></section>
+        </div> -->
+      </section>
+    </div>
+    <div class="spacer"></div>
+    <!-- Contact section -->
+    <section id="contact" class="main-section">
+      <h2 class="section-header animate-on-scroll">Contact</h2>
+      <div class="temp"></div>
+    </section>
+  </body>
+  <!-- https://stackoverflow.com/questions/46008760/how-to-build-multiple-language-website-using-pure-html-js-jquery -->
+  <script src="hero-connecting-dots.js"></script>
+  <script src="background-connecting-dots.js"></script>
+  <script src="index.js"></script>
+</html>
