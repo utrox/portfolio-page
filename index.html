@@ -1,136 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bence Hunyadi | Full Stack Developer</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/48b7cb8bbe.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- Hero section -->
-    <div class="hero">
-      <div class="canvas-wrapper">
-        <canvas id="hero-canvas"></canvas>
-      </div>
-      <div class="hero-heading">
-        <section class="heading-line">
-          Hello, I'm <span class="highlight">Bence</span>.
-        </section>
-        <section class="heading-line">
-          I'm a full stack developer.<span id="typewriter"></span>
-        </section>
-        <a href="#about" class="hero-button">View my work</a>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bence Hunyadi | Full Stack Developer</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/48b7cb8bbe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Hero section -->
+  <div class="hero">
+    <div class="canvas-wrapper">
+      <canvas id="hero-canvas"></canvas>
     </div>
-    <!-- Background canvas -->
-    <div class="canvas-wrapper background-canvas">
-      <canvas id="background-canvas"></canvas>
+    <div class="hero-heading">
+      <section class="heading-line">
+        Hello, I'm <span class="highlight">Bence</span>.
+      </section>
+      <section class="heading-line">
+        I'm a full stack developer.<span id="typewriter"></span>
+      </section>
+      <a href="#about" class="hero-button">View my work</a>
     </div>
-    <!-- Header -->
-    <header class="sticky-header">
-      <a href="#" class="nav-item">Home</a>
-      <a href="#about" class="nav-item">About</a>
-      <a href="#skills" class="nav-item">Skills</a>
-      <a href="#projects" class="nav-item">Projects</a>
-      <a href="#contact" class="nav-item">Contact</a>
-    </header>
-    <div class="content-wrapper">
-      <!-- About section -->
-      <section id="about" class="main-section">
-        <h2 class="section-header animate-on-scroll">About</h2>
-        <div class="temp"></div>
-      </section>
-      <div class="spacer"></div>
-      <!-- Skills section -->
-      <section id="skills" class="main-section">
-        <h2 class="section-header animate-on-scroll">Skills</h2>
-        <ul class="skills-container animate-on-scroll">
-          <li class="single-skill">
-            <i class="fa-brands fa-html5"></i>
-            <p>HTML</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-brands fa-css3-alt"></i>
-            <p>CSS</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-brands fa-js"></i>
-            <p>JavaScript</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-brands fa-python"></i>
-            <p>Python</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-brands fa-node"></i>
-            <p>Node.js</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-brands fa-react"></i>
-            <p>React</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-solid fa-x"></i> <!-- TODO icon -->
-            <p>Django</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-solid fa-database"></i>
-            <p>SQL</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-solid fa-x"></i> <!-- TODO icon -->
-            <p>mongoDB</p>
-          </li>
-          <li class="single-skill">
-            <i class="fa-brands fa-git-alt"></i>
-            <p>git</p>
-          </li>
-        </ul>
-      </section>
-      <div class="spacer"></div>
-      <!-- Projects section -->
-      <section id="projects" class="main-section">
-        <h2 class="section-header animate-on-scroll">Projects</h2>
-        <div class="temp"></div>
-        <!-- <div class="single-project">
-          <section class="project-half left-half">
-              <img
-                src="./projects/project-1-thumbnail.png"
-                data-gif-path="./projects/project-1.gif"
-                data-thumbnail-path="./projects/project-1-thumbnail.png"
-                alt="project-1"
-                class="project-gif"
-              />
-              <img
-                src="./projects/IMac_vector.svg"
-                alt="monitor"
-                class="monitor-svg"
-              />
-          </section>
-          <section class="project-half right-half"></section>
-        </div> -->
-      </section>
-    </div>
-    <div class="spacer"></div>
-    <!-- Contact section -->
-    <section id="contact" class="main-section">
-      <h2 class="section-header animate-on-scroll">Contact</h2>
+  </div>
+  <!-- Background canvas -->
+  <div class="canvas-wrapper background-canvas">
+    <canvas id="background-canvas"></canvas>
+  </div>
+  <!-- Header -->
+  <header class="sticky-header">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#about" class="nav-item">About</a>
+    <a href="#skills" class="nav-item">Skills</a>
+    <a href="#projects" class="nav-item">Projects</a>
+    <a href="#contact" class="nav-item">Contact</a>
+  </header>
+  <div class="content-wrapper">
+    <!-- About section -->
+    <section id="about" class="main-section">
+      <h2 class="section-header animate-on-scroll">About</h2>
       <div class="temp"></div>
     </section>
-  </body>
-  <!-- https://stackoverflow.com/questions/46008760/how-to-build-multiple-language-website-using-pure-html-js-jquery -->
-  <script src="hero-connecting-dots.js"></script>
-  <script src="background-connecting-dots.js"></script>
-  <script src="index.js"></script>
+    <div class="spacer"></div>
+    <!-- Skills section -->
+    <section id="skills" class="main-section">
+      <h2 class="section-header animate-on-scroll">Skills</h2>
+      <ul class="skills-container animate-on-scroll">
+        <li class="single-skill">
+          <i class="fa-brands highlight-on-hover fa-html5"></i>
+          <p>HTML</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-brands highlight-on-hover fa-css3-alt"></i>
+          <p>CSS</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-brands highlight-on-hover fa-js"></i>
+          <p>JavaScript</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-brands highlight-on-hover fa-python"></i>
+          <p>Python</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-brands highlight-on-hover fa-node"></i>
+          <p>Node.js</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-brands highlight-on-hover fa-react"></i>
+          <p>React</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-solid highlight-on-hover fa-x"></i>
+          <!-- TODO icon -->
+          <p>Django</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-solid highlight-on-hover fa-database"></i>
+          <p>SQL</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-solid highlight-on-hover fa-x"></i>
+          <!-- TODO icon -->
+          <p>mongoDB</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-brands highlight-on-hover fa-git-alt"></i>
+          <p>git</p>
+        </li>
+      </ul>
+    </section>
+    <div class="spacer"></div>
+    <!-- Projects section -->
+    <section id="projects" class="main-section">
+      <h2 class="section-header animate-on-scroll">Projects</h2>
+      <div class="projects-container">
+        <div class="single-project">
+          <section class="project-half animate-on-scroll left-half">
+            <img src="./media/project-1-thumbnail.png" data-gif-path="./media/project-1.gif"
+              data-thumbnail-path="./media/project-1-thumbnail.png" alt="project-1" class="project-gif" />
+            <img src="./media/IMac_vector.svg" alt="monitor" class="monitor-svg" />
+          </section>
+          <section class="project-half animate-on-scroll right-half">
+            <div class="project-details">
+              <h3>Name and title of the project</h3>
+              <p>
+                Description of the project. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Ipsa nisi, odio voluptates illum
+                est vitae doloremque nostrum blanditiis laborum, repellendus
+                laudantium sed quis nobis modi iusto alias dolorum magnam
+                provident?
+              </p>
+              <div class="made-with">
+                <h4>Made with</h4>
+                <ul class="list-of-icons">
+                  <li><i class="fa-brands highlight-on-hover fa-html5" title="HTML"></i></li>
+                  <li><i class="fa-brands highlight-on-hover fa-css3-alt" title="CSS"></i></li>
+                  <li><i class="fa-brands highlight-on-hover fa-react" title="React"></i></li>
+                  <li><i class="fa-brands highlight-on-hover fa-node" title="Node"></i></li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="https://www.github.com" target="_blank" class="underline-animated-btn">
+                  GitHub</a>
+                <span>|</span>
+                <a href="https://www.google.com" target="_blank" class="underline-animated-btn">
+                  Live Site</a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="single-project">
+          <section class="project-half animate-on-scroll left-half">
+            <div class="project-details">
+              <h3>Name and title of the project</h3>
+              <p>
+                Description of the project. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Ipsa nisi, odio voluptates illum
+                est vitae doloremque nostrum blanditiis laborum, repellendus
+                laudantium sed quis nobis modi iusto alias dolorum magnam
+                provident?
+              </p>
+              <div class="made-with">
+                <h4>Made with</h4>
+                <ul class="list-of-icons">
+                  <li><i class="fa-brands highlight-on-hover fa-html5" title="HTML"></i></li>
+                  <li><i class="fa-brands highlight-on-hover fa-css3-alt" title="CSS"></i></li>
+                  <li><i class="fa-brands highlight-on-hover fa-react" title="React"></i></li>
+                  <li><i class="fa-brands highlight-on-hover fa-node" title="Node"></i></li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="https://www.github.com" target="_blank" class="underline-animated-btn">
+                  GitHub</a>
+                <span>|</span>
+                <a href="https://www.google.com" target="_blank" class="underline-animated-btn">
+                  Live Site</a>
+              </div>
+            </div>
+          </section>
+          <section class="project-half animate-on-scroll right-half">
+            <img src="./media/project-1-thumbnail.png" data-gif-path="./media/project-1.gif"
+              data-thumbnail-path="./media/project-1-thumbnail.png" alt="project-1" class="project-gif" />
+            <img src="./media/IMac_vector.svg" alt="monitor" class="monitor-svg" />
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="spacer"></div>
+  <!-- Contact section -->
+  <section id="contact" class="main-section">
+    <h2 class="section-header animate-on-scroll">Contact</h2>
+    <div class="form-container">
+      <form class="contact-form animate-on-scroll" action="https://formspree.io/f/xyyojqly" method="POST" target="_blank"
+        autocomplete="off">
+        <p>
+          Have a question or want to work together? Let's get in touch!
+        </p>
+        <input type="email" autocomplete="your-email" name="your-email" placeholder="YOUR EMAIL" />
+        <input type="text" name="your-name" autocomplete="your-name" placeholder="YOUR NAME" />
+        <textarea name="message" placeholder="YOUR MESSAGE" rows="6"></textarea>
+        <div type="submit" class="send-btn underline-animated-btn">Send</div>
+      </form>
+    </div>
+  </section>
+  <div class="spacer"></div>
+  <!-- Footer -->
+  <footer>
+    <a href="#" class="back-to-top">
+      <i class="fa-solid fa-angles-up"></i>
+    </a>
+    <section class="social-media-icons">
+      <a href="https://www.github.com/utrox" target="_blank">
+        <i class="fa-brands highlight-on-hover fa-github"></i>
+      </a>
+      <a href="https://www.gmail.com" target="_blank">
+        <i class="fa-solid highlight-on-hover fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank">
+        <i class="fa-brands highlight-on-hover fa-linkedin"></i>
+      </a>
+    </section>
+    <section class="copyright">Bence Hunyadi &copy; 2022</p>
+  </footer>
+</body>
+<!-- https://stackoverflow.com/questions/46008760/how-to-build-multiple-language-website-using-pure-html-js-jquery -->
+<script src="hero-connecting-dots.js"></script>
+<script src="background-connecting-dots.js"></script>
+<script src="index.js"></script>
+
 </html>
