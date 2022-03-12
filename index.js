@@ -36,3 +36,20 @@ projectGifs.forEach((gif) => {
     gif.src = gif.dataset.thumbnailPath;
   });
 });
+
+
+function onSubmit(token) {
+  document.getElementById("demo-form").submit();
+}
+
+function onClick(e) {
+  e.preventDefault();
+  grecaptcha.ready(function () {
+    grecaptcha
+      .execute("6LcjYNIeAAAAAHDsQJPonfkYQhrQxaxTBIRjPVW7", { action: "submit" })
+      .then(function (token) {
+        // Add your logic to submit to your backend server here.
+      });
+  });
+}
+

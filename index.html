@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/48b7cb8bbe.js" crossorigin="anonymous"></script>
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+ <script src="https://www.google.com/recaptcha/api.js?render=6LcjYNIeAAAAAHDsQJPonfkYQhrQxaxTBIRjPVW7"></script>
+
 </head>
 
 <body>
@@ -179,15 +182,20 @@
   <section id="contact" class="main-section">
     <h2 class="section-header animate-on-scroll">Contact</h2>
     <div class="form-container">
-      <form class="contact-form animate-on-scroll" action="https://formspree.io/f/xyyojqly" method="POST" target="_blank"
+      <form class="contact-form animate-on-scroll" action="https://formspree.io/f/xyyojqly" method="POST" target="_blank" 
         autocomplete="off">
+        <!-- TODO https://getform.io/pricing -->
         <p>
           Have a question or want to work together? Let's get in touch!
         </p>
         <input type="email" autocomplete="your-email" name="your-email" placeholder="YOUR EMAIL" />
         <input type="text" name="your-name" autocomplete="your-name" placeholder="YOUR NAME" />
         <textarea name="message" placeholder="YOUR MESSAGE" rows="6"></textarea>
-        <div type="submit" class="send-btn underline-animated-btn">Send</div>
+        <!-- TODO reCaptcha <button class="g-recaptcha" 
+        data-sitekey="6LcjYNIeAAAAAHDsQJPonfkYQhrQxaxTBIRjPVW7" 
+        data-callback='onSubmit' 
+        data-action='submit' type="submit" class="submit-btn underline-animated-btn">Send</button> -->
+        <button type="submit" class="submit-btn underline-animated-btn">Send</button>
       </form>
     </div>
   </section>
@@ -215,5 +223,4 @@
 <script src="hero-connecting-dots.js"></script>
 <script src="background-connecting-dots.js"></script>
 <script src="index.js"></script>
-
 </html>

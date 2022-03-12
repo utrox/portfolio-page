@@ -102,12 +102,14 @@ canvas {
   transition: 0.2s all;
 }
 
-.hero-button::before, .hero-button::after {
+.hero-button::before,
+.hero-button::after {
   border: 0.1em solid var(--highlight-color);
   border-radius: 0.1em;
 }
 
-.hero-button::before, .hero-button::after {
+.hero-button::before,
+.hero-button::after {
   position: absolute;
   content: "";
   left: 0;
@@ -235,6 +237,16 @@ transform: scale(1);
 
 /* Skills */
 
+#skills {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 0;
+}
+
 .skills-container {
   width: 100%;
   display: grid;
@@ -299,7 +311,8 @@ transform: scale(1);
   transform: scale(0.8) translateX(5rem);
 }
 
-.left-half.active, .right-half.active {
+.left-half.active,
+.right-half.active {
   opacity: 1;
   transform: translateX(0);
 }
@@ -468,12 +481,15 @@ transform: scale(1);
   max-height: 35rem;
 }
 
-.contact-form input:focus, .contact-form textarea:focus{
+.contact-form input:focus,
+.contact-form textarea:focus{
     outline: 1px solid var(--highlight-color);
 }
 
-.send-btn {
+.submit-btn {
   font-size: 1.25rem;
+  background-color: transparent;
+  border: none;
 }
 
 /* Footer */
