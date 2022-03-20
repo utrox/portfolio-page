@@ -27,6 +27,10 @@ var canvasDots = function () {
     array: [],
   };
 
+  if (window.innerWidth < 1600) {
+    dots.nb = Math.round(window.innerWidth / 5);
+  }
+
   function Dot() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;

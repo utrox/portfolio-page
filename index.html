@@ -6,28 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bence Hunyadi | Full Stack Developer</title>
+  <link href="media/assets/fontawesome/css/all.css" rel="stylesheet">
+  <!-- <script src="https://kit.fontawesome.com/48b7cb8bbe.js" crossorigin="anonymous"></script>  -->
+  <link rel="icon" type="image/x-icon" href="/media/favicon.ico" />
   <link rel="stylesheet" href="index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/48b7cb8bbe.js" crossorigin="anonymous"></script>
  <script src="https://www.google.com/recaptcha/api.js"></script>
- <script src="https://www.google.com/recaptcha/api.js?render=6LcjYNIeAAAAAHDsQJPonfkYQhrQxaxTBIRjPVW7"></script>
-
 </head>
 
 <body>
   <!-- Hero section -->
-  <div class="hero">
+  <div class="hero main-section" id="hero">
     <div class="canvas-wrapper">
       <canvas id="hero-canvas"></canvas>
     </div>
     <div class="hero-heading">
       <section class="heading-line">
-        Hello, I'm <span class="highlight">Bence</span>.
+        Hello, I'm <br class="responsive">
+        <span class="highlight">Bence Hunyadi</span>.
       </section>
       <section class="heading-line">
-        I'm a full stack developer.<span id="typewriter"></span>
+        I'm a full stack <br class="responsive">
+        web developer.
       </section>
       <a href="#about" class="hero-button">View my work</a>
     </div>
@@ -38,17 +40,39 @@
   </div>
   <!-- Header -->
   <header class="sticky-header">
-    <a href="#" class="nav-item">Home</a>
-    <a href="#about" class="nav-item">About</a>
-    <a href="#skills" class="nav-item">Skills</a>
-    <a href="#projects" class="nav-item">Projects</a>
-    <a href="#contact" class="nav-item">Contact</a>
+    <a href="#" class="nav-item hero">Home</a>
+    <a href="#about" class="nav-item about">About</a>
+    <a href="#skills" class="nav-item skills">Skills</a>
+    <a href="#projects" class="nav-item projects">Projects</a>
+    <a href="#contact" class="nav-item contact">Contact</a>
   </header>
   <div class="content-wrapper">
     <!-- About section -->
     <section id="about" class="main-section">
       <h2 class="section-header animate-on-scroll">About</h2>
-      <div class="temp"></div>
+      <div class="about-container">
+        <div id="about-me-img" class="animate-on-scroll left-slide-in"> </div>
+        <div class="about-me-text animate-on-scroll right-slide-in">
+          <h2>About me</h2>
+          <p>
+            I've decided to try myself at programming in August of 2021 after getting my high school diploma. Since then, programming has became one of my passions.
+          </p>
+          <p>
+            Encountering and solving <span class="highlight">new challanges</span>, the <span class="highlight">creativity</span> involved in coming up with new and better solutions to problems, and
+            the fact that I'll never run out of new things to <span class="highlight">learn</span> drives my <span class="highlight">passion</span> and makes me <span class="highlight">excited</span> about what the future holds for me.
+            I always try to become a better developer on a daily basis, not only by coding, but also by listening to
+            experiences of more <span class="highlight">knowledgeable</span> and <span class="highlight">accomplished</span> people in my field.
+          </p>
+          <p>
+            I'm a currently looking for my first job in web development.
+          </p>
+            <section class="about-links">
+              Interested? <a href="#contact" class="highlight underline-on-hover about-links" >Let's get in touch!</a> <br>
+              Not convinced yet? <a href="#projects" class="highlight underline-on-hover about-links" >Check out my projects!</a> <br>
+              Want to learn more about me? <a href="resume todod" class="highlight underline-on-hover about-links">Download my resume!</a>
+            </section>
+          </div>
+      </div>
     </section>
     <div class="spacer"></div>
     <!-- Skills section -->
@@ -56,7 +80,7 @@
       <h2 class="section-header animate-on-scroll">Skills</h2>
       <ul class="skills-container animate-on-scroll">
         <li class="single-skill">
-          <i class="fa-brands highlight-on-hover fa-html5"></i>
+          <i class="fa fa-brands highlight-on-hover fa-html5"></i>
           <p>HTML</p>
         </li>
         <li class="single-skill">
@@ -80,8 +104,8 @@
           <p>React</p>
         </li>
         <li class="single-skill">
-          <i class="fa-solid highlight-on-hover fa-x"></i>
           <!-- TODO icon -->
+          <i class="fa-solid highlight-on-hover fa-question"></i>
           <p>Django</p>
         </li>
         <li class="single-skill">
@@ -89,13 +113,21 @@
           <p>SQL</p>
         </li>
         <li class="single-skill">
-          <i class="fa-solid highlight-on-hover fa-x"></i>
+          <i class="fa-solid highlight-on-hover fa-question"></i>
           <!-- TODO icon -->
           <p>mongoDB</p>
         </li>
         <li class="single-skill">
           <i class="fa-brands highlight-on-hover fa-git-alt"></i>
           <p>git</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-solid highlight-on-hover fa-question"></i>
+          <p>Adobe XD</p>
+        </li>
+        <li class="single-skill">
+          <i class="fa-solid highlight-on-hover fa-question"></i>
+          <p>TODO</p>
         </li>
       </ul>
     </section>
@@ -105,14 +137,16 @@
       <h2 class="section-header animate-on-scroll">Projects</h2>
       <div class="projects-container">
         <div class="single-project">
-          <section class="project-half animate-on-scroll left-half">
-            <img src="./media/project-1-thumbnail.png" data-gif-path="./media/project-1.gif"
-              data-thumbnail-path="./media/project-1-thumbnail.png" alt="project-1" class="project-gif" />
-            <img src="./media/IMac_vector.svg" alt="monitor" class="monitor-svg" />
+          <section class="project-half project-dp animate-on-scroll left-half left-slide-in">
+            <div class="project-display">
+              <img src="./media/IMac_vector.svg" alt="monitor" class="project-monitor">
+              <img src="./media/project-1-thumbnail.png" data-gif-path="./media/project-1.gif"
+                data-thumbnail-path="./media/project-1-thumbnail.png" alt="project-1" class="project-gif" />
+            </div>
           </section>
-          <section class="project-half animate-on-scroll right-half">
+          <section class="project-half project-txt animate-on-scroll right-half right-slide-in">
             <div class="project-details">
-              <h3>Name and title of the project</h3>
+              <h3>Example project 1</h3>
               <p>
                 Description of the project. Lorem ipsum dolor sit amet
                 consectetur adipisicing elit. Ipsa nisi, odio voluptates illum
@@ -140,9 +174,9 @@
           </section>
         </div>
         <div class="single-project">
-          <section class="project-half animate-on-scroll left-half">
+          <section class="project-half project-txt animate-on-scroll left-half left-slide-in">
             <div class="project-details">
-              <h3>Name and title of the project</h3>
+              <h3>Example project 2</h3>
               <p>
                 Description of the project. Lorem ipsum dolor sit amet
                 consectetur adipisicing elit. Ipsa nisi, odio voluptates illum
@@ -168,10 +202,12 @@
               </div>
             </div>
           </section>
-          <section class="project-half animate-on-scroll right-half">
-            <img src="./media/project-1-thumbnail.png" data-gif-path="./media/project-1.gif"
-              data-thumbnail-path="./media/project-1-thumbnail.png" alt="project-1" class="project-gif" />
-            <img src="./media/IMac_vector.svg" alt="monitor" class="monitor-svg" />
+          <section class="project-half project-dp animate-on-scroll right-half right-slide-in">
+            <div class="project-display">
+              <img src="./media/IMac_vector.svg" alt="monitor" class="project-monitor">
+              <img src="./media/project-1-thumbnail.png" data-gif-path="./media/project-1.gif"
+                data-thumbnail-path="./media/project-1-thumbnail.png" alt="project-1" class="project-gif" />
+            </div>
           </section>
         </div>
       </div>
@@ -182,24 +218,20 @@
   <section id="contact" class="main-section">
     <h2 class="section-header animate-on-scroll">Contact</h2>
     <div class="form-container">
-      <form class="contact-form animate-on-scroll" action="https://formspree.io/f/xyyojqly" method="POST" target="_blank" 
-        autocomplete="off">
+      <form class="contact-form animate-on-scroll" action="https://getform.io/f/e031a61c-b4ad-4fc8-b45e-a8b8b82d22f6"
+        method="POST" autocomplete="off">
         <!-- TODO https://getform.io/pricing -->
         <p>
           Have a question or want to work together? Let's get in touch!
         </p>
-        <input type="email" autocomplete="your-email" name="your-email" placeholder="YOUR EMAIL" />
-        <input type="text" name="your-name" autocomplete="your-name" placeholder="YOUR NAME" />
+        <input type="email" autocomplete="off" name="your-email" placeholder="YOUR EMAIL" />
+        <input type="text" name="your-name" autocomplete="off" placeholder="YOUR NAME" />
         <textarea name="message" placeholder="YOUR MESSAGE" rows="6"></textarea>
-        <!-- TODO reCaptcha <button class="g-recaptcha" 
-        data-sitekey="6LcjYNIeAAAAAHDsQJPonfkYQhrQxaxTBIRjPVW7" 
-        data-callback='onSubmit' 
-        data-action='submit' type="submit" class="submit-btn underline-animated-btn">Send</button> -->
+        <div class="g-recaptcha" data-theme="dark" data-sitekey="6LcAuO4eAAAAABReS4QXjImWOvtvAiScAZ918KuN"></div>
         <button type="submit" class="submit-btn underline-animated-btn">Send</button>
       </form>
     </div>
   </section>
-  <div class="spacer"></div>
   <!-- Footer -->
   <footer>
     <a href="#" class="back-to-top">
@@ -209,9 +241,9 @@
       <a href="https://www.github.com/utrox" target="_blank">
         <i class="fa-brands highlight-on-hover fa-github"></i>
       </a>
-      <a href="https://www.gmail.com" target="_blank">
-        <i class="fa-solid highlight-on-hover fa-envelope"></i>
-      </a>
+        <a onclick="copyEmailAdress()">
+          <i class="fa-solid highlight-on-hover fa-envelope"></i>
+        </a>
       <a href="https://www.linkedin.com" target="_blank">
         <i class="fa-brands highlight-on-hover fa-linkedin"></i>
       </a>
@@ -223,4 +255,5 @@
 <script src="hero-connecting-dots.js"></script>
 <script src="background-connecting-dots.js"></script>
 <script src="index.js"></script>
+
 </html>

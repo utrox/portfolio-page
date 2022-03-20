@@ -4,6 +4,9 @@ const skills = document.querySelectorAll(".single-skill");
 const skillsTransitionDelay = 0.15;
 const projectGifs = document.querySelectorAll(".project-gif");
 
+const navItems = document.querySelectorAll(".nav-item");
+const mainSections = document.querySelectorAll(".main-section");
+
 skills.forEach((element, index) => {
   element.style.transitionDelay = `${index * skillsTransitionDelay}s`;
 });
@@ -17,6 +20,19 @@ function handleScroll() {
       element.classList.remove("active");
     }
   });
+  var currentSection = "";
+  mainSections.forEach((section) => {
+    if (window.pageYOffset >= section.offsetTop - window.innerHeight * 0.45) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navItems.forEach((item) => {
+    item.classList.remove("active");
+    if (item.classList.contains(current)) {
+      item.classList.add("active");
+    }
+  });
 }
 
 function toggleActive() {
@@ -27,29 +43,24 @@ function toggleActive() {
 
 document.addEventListener("scroll", handleScroll);
 
-projectGifs.forEach((gif) => {
-  gif.addEventListener("mouseenter", () => {
-    gif.src = gif.dataset.gifPath;
-  });
+// fix animations don't run when reloading page before scrolling
+window.onload = handleScroll;
 
-  gif.addEventListener("mouseleave", () => {
-    gif.src = gif.dataset.thumbnailPath;
-  });
+projectGifs.forEach((gif) => {
+  // when mouse enters a project image, start the gif.
+  if (gif.dataset.gifPath) {
+    gif.addEventListener("mouseenter", () => {
+      gif.src = gif.dataset.gifPath;
+    });
+
+    // when mouse leaves a project image, stop the gif.
+    gif.addEventListener("mouseleave", () => {
+      gif.src = gif.dataset.thumbnailPath;
+    });
+  }
 });
 
-
-function onSubmit(token) {
-  document.getElementById("demo-form").submit();
+function copyEmailAdress() {
+  navigator.clipboard.writeText("hunyadi.bence1@gmail.com");
+  document.getElementById("myTooltip").innerHTML = "Copied email address.";
 }
-
-function onClick(e) {
-  e.preventDefault();
-  grecaptcha.ready(function () {
-    grecaptcha
-      .execute("6LcjYNIeAAAAAHDsQJPonfkYQhrQxaxTBIRjPVW7", { action: "submit" })
-      .then(function (token) {
-        // Add your logic to submit to your backend server here.
-      });
-  });
-}
-
