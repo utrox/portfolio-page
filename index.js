@@ -61,8 +61,11 @@ projectGifs.forEach((gif) => {
 });
 
 function copyEmailAdress(e) {
-  e.target.classList = "icon-envelope-circle-check-solid highlight-on-hover";
-  e.target.title = "Copied email adress.";
+  const copyEmailBtn = e.currentTarget;
+  const emailIcons = copyEmailBtn.querySelectorAll("i");
+  emailIcons.forEach((icon) => {
+    icon.classList.remove("icon-envelope-solid");
+    icon.classList.add("icon-envelope-circle-check-solid");
+  });
   navigator.clipboard.writeText("hunyadi.bence1@gmail.com");
-  document.getElementById("myTooltip").innerHTML = "Copied email address.";
 }

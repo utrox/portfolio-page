@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
- <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
@@ -54,23 +54,30 @@
         <div class="about-me-text animate-on-scroll right-slide-in">
           <h2>About me</h2>
           <p>
-            I've decided to try myself at programming in August of 2021 after getting my high school diploma. Since then, programming has became one of my passions.
+            I've decided to try myself at programming in August of 2021 after getting my high school diploma. Since
+            then, programming has became one of my passions.
           </p>
           <p>
-            Encountering and solving <span class="highlight">new challanges</span>, the <span class="highlight">creativity</span> involved in coming up with new and better solutions to problems, and
-            the fact that I'll never run out of new things to <span class="highlight">learn</span> drives my <span class="highlight">passion</span> and makes me <span class="highlight">excited</span> about what the future holds for me.
+            Encountering and solving <span class="highlight">new challanges</span>, the <span
+              class="highlight">creativity</span> involved in coming up with new and better solutions to problems, and
+            the fact that I'll never run out of new things to <span class="highlight">learn</span> drives my <span
+              class="highlight">passion</span> and makes me <span class="highlight">excited</span> about what the future
+            holds for me.
             I always try to become a better developer on a daily basis, not only by coding, but also by listening to
-            experiences of more <span class="highlight">knowledgeable</span> and <span class="highlight">accomplished</span> people in my field.
+            experiences of more <span class="highlight">knowledgeable</span> and <span
+              class="highlight">accomplished</span> people in my field.
           </p>
           <p>
             I'm a currently looking for my first job in web development.
           </p>
-            <section class="about-links">
-              Interested? <a href="#contact" class="highlight underline-on-hover about-links" >Let's get in touch!</a> <br>
-              Not convinced yet? <a href="#projects" class="highlight underline-on-hover about-links" >Check out my projects!</a> <br>
-              Want to learn more about me? <a href="resume todod" class="highlight underline-on-hover about-links">Download my resume!</a>
-            </section>
-          </div>
+          <section class="about-links">
+            Interested? <a href="#contact" class="highlight underline-on-hover about-links">Let's get in touch!</a> <br>
+            Not convinced yet? <a href="#projects" class="highlight underline-on-hover about-links">Check out my
+              projects!</a> <br>
+            Want to learn more about me? <a href="resume todod"
+              class="highlight underline-on-hover about-links">Download my resume!</a>
+          </section>
+        </div>
       </div>
     </section>
     <div class="spacer"></div>
@@ -137,8 +144,8 @@
           <section class="project-half project-dp animate-on-scroll left-half left-slide-in">
             <div class="project-display">
               <img src="./media/IMac_vector.svg" alt="monitor" class="project-monitor">
-              <img src="./media/project-1-thumbnail.png" data-gif-path="./media/project-1.gif"
-                data-thumbnail-path="./media/project-1-thumbnail.png" alt="project-1" class="project-gif" />
+              <img src="./media/projects/project-1-thumbnail.png" data-gif-path="./media/projects/project-1.gif"
+                data-thumbnail-path="./media/projects/project-1-thumbnail.png" alt="project-1" class="project-gif" />
             </div>
           </section>
           <section class="project-half project-txt animate-on-scroll right-half right-slide-in">
@@ -202,8 +209,8 @@
           <section class="project-half project-dp animate-on-scroll right-half right-slide-in">
             <div class="project-display">
               <img src="./media/IMac_vector.svg" alt="monitor" class="project-monitor">
-              <img src="./media/project-1-thumbnail.png" data-gif-path="./media/project-1.gif"
-                data-thumbnail-path="./media/project-1-thumbnail.png" alt="project-1" class="project-gif" />
+              <img src="./media/projects/project-1-thumbnail.png" data-gif-path="./media/projects/project-1.gif"
+                data-thumbnail-path="./media/projects/project-1-thumbnail.png" alt="project-1" class="project-gif" />
             </div>
           </section>
         </div>
@@ -215,15 +222,17 @@
   <section id="contact" class="main-section">
     <h2 class="section-header animate-on-scroll">Contact</h2>
     <div class="form-container">
+      <!-- Contact form -->
       <form class="contact-form animate-on-scroll" action="https://getform.io/f/e031a61c-b4ad-4fc8-b45e-a8b8b82d22f6"
-        method="POST" autocomplete="off">
-        <!-- TODO https://getform.io/pricing -->
+        method="POST" autocomplete="off">>
         <p>
           Have a question or want to work together? Let's get in touch!
         </p>
+        <!-- Contact form inputs -->
         <input type="email" autocomplete="off" name="your-email" placeholder="YOUR EMAIL" />
         <input type="text" name="your-name" autocomplete="off" placeholder="YOUR NAME" />
         <textarea name="message" placeholder="YOUR MESSAGE" rows="6"></textarea>
+        
         <div class="g-recaptcha" data-theme="dark" data-sitekey="6LcAuO4eAAAAABReS4QXjImWOvtvAiScAZ918KuN"></div>
         <button type="submit" class="submit-btn underline-animated-btn">Send</button>
       </form>
@@ -234,18 +243,28 @@
     <a href="#" class="back-to-top">
       <i class="icon-angles-up-solid"></i>
     </a>
+
+    <!-- Footer icons -->
     <section class="social-media-icons">
       <a href="https://www.github.com/utrox" target="_blank">
-        <i class="icon-github highlight-on-hover"></i>
+        <i class="icon-github top-icon"></i>
+        <i class="icon-github bottom-icon"></i>
       </a>
-        <a onclick="copyEmailAdress(event)">
-          <i class="icon-envelope-solid highlight-on-hover" title="Copy email adress"></i>
-        </a>
+
+      <a onclick="copyEmailAdress(event)">
+        <i class="icon-envelope-solid top-icon"></i>
+        <i class="icon-envelope-solid bottom-icon">
+          <!-- <section class="copied">🗸</section> -->
+        </i>
+
+      </a>
       <a href="https://www.linkedin.com" target="_blank">
-        <i class="icon-linkedin2 highlight-on-hover"></i>
+        <i class="icon-linkedin2 top-icon"></i>
+        <i class="icon-linkedin2 bottom-icon"></i>
       </a>
+
     </section>
-    <section class="copyright">Bence Hunyadi &copy; 2022</p>
+    <section class="copyright"><span class="highlight">Bence Hunyadi</span> &copy; 2022</p>
   </footer>
 </body>
 <!-- https://stackoverflow.com/questions/46008760/how-to-build-multiple-language-website-using-pure-html-js-jquery -->

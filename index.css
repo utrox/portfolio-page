@@ -36,6 +36,13 @@ a {
   height: 100vh;
 }
 
+
+/* Needed to scale the icons. */
+i.highlight-on-hover {
+  display: flex;
+  transition: 0.25s all;
+}
+
 .highlight-on-hover:hover {
   color: var(--highlight-color);
   transform: scale(1.125);
@@ -328,7 +335,7 @@ section.main-section {
 .single-skill svg {
   font-size: 4.5rem;
   height: 4.5rem;
-  transition: 0.1s all;
+  transition: 0.2s all;
   margin-bottom: 0.1em;
 }
 
@@ -593,17 +600,50 @@ footer {
 }
 
 .social-media-icons a {
-  font-size: 2.5rem;
-  margin: 0.75em;
+  font-size: 2.25rem;
+  margin: 0 0.75em;
   cursor: pointer;
+  padding: 0.1em;
+  width: 1.4em;
+  height: 1.4em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;  
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s all;
+
+  --translate-distance: 300%;
 }
 
 .social-media-icons i {
-  transition: 0.3s all;
+  transition: 0s transition;
+  position: absolute;
 }
 
-.social-media-icons i:hover {
-  transform: scale(1.25);
+.social-media-icons a:hover {
+  background-color: var(--highlight-color);
+}
+
+.social-media-icons i.top-icon {
+  transform: translateY(calc(var(--translate-distance) * -1));
+}
+
+.social-media-icons a:hover i {
+  transition: 0.4s all;
+}
+
+.social-media-icons a:hover i.top-icon {
+  transform: translateY(0)
+}
+
+.social-media-icons a:hover i.bottom-icon {
+  transform: translateY(var(--translate-distance));
+}
+
+.copied {
+  position: absolute;
+  font-size: 0.7rem;
 }
 
 /* scrollbar */
