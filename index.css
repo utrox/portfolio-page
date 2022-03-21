@@ -38,7 +38,7 @@ a {
 
 .highlight-on-hover:hover {
   color: var(--highlight-color);
-  transform: scale(1.1);
+  transform: scale(1.125);
 }
 
 /* Hero-box */
@@ -329,7 +329,7 @@ section.main-section {
   font-size: 4.5rem;
   height: 4.5rem;
   transition: 0.1s all;
-  fill: white;
+  margin-bottom: 0.1em;
 }
 
 .single-skill p {
@@ -598,51 +598,12 @@ footer {
   cursor: pointer;
 }
 
-.social-media-icons svg {
+.social-media-icons i {
   transition: 0.3s all;
 }
 
-.social-media-icons svg:hover {
+.social-media-icons i:hover {
   transform: scale(1.25);
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 0.75rem;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
 }
 
 /* scrollbar */

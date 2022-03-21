@@ -60,7 +60,9 @@ projectGifs.forEach((gif) => {
   }
 });
 
-function copyEmailAdress() {
+function copyEmailAdress(e) {
+  e.target.classList = "icon-envelope-circle-check-solid highlight-on-hover";
+  e.target.title = "Copied email adress.";
   navigator.clipboard.writeText("hunyadi.bence1@gmail.com");
   document.getElementById("myTooltip").innerHTML = "Copied email address.";
 }
