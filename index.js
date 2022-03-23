@@ -1,26 +1,22 @@
 const animatedElements = document.querySelectorAll(".animate-on-scroll");
 const animationScreenProportion = 0.95;
-const skills = document.querySelectorAll(".single-skill");
-const skillsTransitionDelay = 0.15;
-const projectGifs = document.querySelectorAll(".project-gif");
-
 const navItems = document.querySelectorAll(".nav-item");
 const mainSections = document.querySelectorAll(".main-section");
 
-skills.forEach((element, index) => {
-  element.style.transitionDelay = `${index * skillsTransitionDelay}s`;
-});
-
 function handleScroll() {
+  // animate the elements that should be animated when scrolling. 
   animatedElements.forEach((element) => {
     const distanceFromTop = element.getBoundingClientRect().top;
+    // if the element is above a given point of the window...
     if (distanceFromTop - window.innerHeight * animationScreenProportion < 0) {
+      // ...add the '.active' class.
       element.classList.add("active");
     } else {
       element.classList.remove("active");
     }
   });
-  var currentSection = "";
+
+  // highlight the currently active main section
   mainSections.forEach((section) => {
     if (window.pageYOffset >= section.offsetTop - window.innerHeight * 0.45) {
       current = section.getAttribute("id");
@@ -35,17 +31,11 @@ function handleScroll() {
   });
 }
 
-function toggleActive() {
-  skills.forEach((element) => {
-    element.classList.toggle("active");
-  });
-}
-
+// fix animations not running when reloading page before scrolling
+window.onload = handleScroll;
 document.addEventListener("scroll", handleScroll);
 
-// fix animations don't run when reloading page before scrolling
-window.onload = handleScroll;
-
+const projectGifs = document.querySelectorAll(".project-gif");
 projectGifs.forEach((gif) => {
   // when mouse enters a project image, start the gif.
   if (gif.dataset.gifPath) {
@@ -60,6 +50,14 @@ projectGifs.forEach((gif) => {
   }
 });
 
+// add an increasing transition delay to each skill icon.
+const skills = document.querySelectorAll(".single-skill");
+const skillsTransitionDelay = 0.15;
+skills.forEach((element, index) => {
+  element.style.transitionDelay = `${index * skillsTransitionDelay}s`;
+});
+
+// change icon of button, and copy email adress to clipboard
 function copyEmailAdress(e) {
   const copyEmailBtn = e.currentTarget;
   const emailIcons = copyEmailBtn.querySelectorAll("i");

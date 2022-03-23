@@ -88,7 +88,7 @@ canvas {
   align-self: center;
   color: white;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.75rem;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -218,8 +218,8 @@ section.main-section {
   position: relative;
   margin: 5rem auto;
   width: fit-content;
-  /* opacity: 0; TODO decide
-  transform: scale(0.8); */
+  opacity: 0; 
+  transform: scale(0.8);
   transition: 0.3s all;
 }
 
@@ -639,11 +639,6 @@ footer {
 
 .social-media-icons a:hover i.bottom-icon {
   transform: translateY(var(--translate-distance));
-}
-
-.copied {
-  position: absolute;
-  font-size: 0.7rem;
 }
 
 /* scrollbar */

@@ -1,7 +1,5 @@
 ### Fix: 
-- optimalize javascript
+- optimize css
 
 ### Add:
-- email copied visszajelzés
-- fill with projects
-- set final hero font-sizes
+- fill with projects & content D:
