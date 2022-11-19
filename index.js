@@ -3,20 +3,22 @@ const animationScreenProportion = 0.95;
 const navItems = document.querySelectorAll(".nav-item");
 const mainSections = document.querySelectorAll(".main-section");
 
-function handleScroll() {
-  // animate the elements that should be animated when scrolling. 
+const setAnimatedElementsVisibility = () => {
+  // Add the ˙active` class to elements that should be animated when scrolling.
   animatedElements.forEach((element) => {
     const distanceFromTop = element.getBoundingClientRect().top;
-    // if the element is above a given point of the window...
+
     if (distanceFromTop - window.innerHeight * animationScreenProportion < 0) {
-      // ...add the '.active' class.
       element.classList.add("active");
     } else {
       element.classList.remove("active");
     }
   });
+};
 
-  // highlight the currently active main section
+const highlightCurrentSectionInHeader = () => {
+  let current;
+  // Highlight the currently active main section in the header.
   mainSections.forEach((section) => {
     if (window.pageYOffset >= section.offsetTop - window.innerHeight * 0.45) {
       current = section.getAttribute("id");
@@ -29,9 +31,14 @@ function handleScroll() {
       item.classList.add("active");
     }
   });
+};
+
+function handleScroll() {
+  setAnimatedElementsVisibility();
+  highlightCurrentSectionInHeader();
 }
 
-// fix animations not running when reloading page before scrolling
+// Add correct animation when reloading the page.
 window.onload = handleScroll;
 document.addEventListener("scroll", handleScroll);
 
