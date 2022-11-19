@@ -6,15 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bence Hunyadi | Full Stack Developer</title>
+  
   <link rel="icon" type="image/x-icon" href="/media/favicon.ico" />
   <link rel="stylesheet" href="index.css" />
+  
   <!-- Fonts & Icons -->
   <link rel="stylesheet" href="media/assets/icomoon/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
+  
   <!-- reCaptcha v2 -->
   <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  <!-- JavaScript files -->
+  <script defer src="hero-connecting-dots.js"></script>
+  <script defer src="background-connecting-dots.js"></script>
+  <script defer src="index.js"></script>
 </head>
 
 <body>
@@ -35,10 +43,12 @@
       <a href="#about" class="hero-button">View my work</a>
     </div>
   </div>
+
   <!-- Background canvas -->
   <div class="canvas-wrapper background-canvas">
     <canvas id="background-canvas"></canvas>
   </div>
+
   <!-- Header -->
   <header class="sticky-header">
     <a href="#" class="nav-item hero">Home</a>
@@ -47,20 +57,26 @@
     <a href="#projects" class="nav-item projects">Projects</a>
     <a href="#contact" class="nav-item contact">Contact</a>
   </header>
+
   <div class="content-wrapper">
+    
     <!-- About section -->
     <section id="about" class="main-section">
+      
       <h2 class="section-header animate-on-scroll">About</h2>
       <div class="about-container">
-        <!-- This will be an image about me in the future :D -->
+        <!-- TODO: This will be an image about me in the future :D -->
         <div id="about-me-img" class="animate-on-scroll left-slide-in"></div>
+        
         <!-- About me text container -->
         <div class="about-me-text animate-on-scroll right-slide-in">
+
           <h2>About me</h2>
           <p>
             I've decided to try myself at programming in August of 2021 after getting my high school diploma. Since
             then, programming has became one of my passions.
           </p>
+
           <p>
             Encountering and solving <span class="highlight">new challanges</span>, the <span
               class="highlight">creativity</span> involved in coming up with new and better solutions to problems, and
@@ -71,94 +87,136 @@
             experiences of more <span class="highlight">knowledgeable</span> and <span
               class="highlight">accomplished</span> people in my field.
           </p>
+
           <p>
-            I'm a currently looking for my first job in web development.
+            Currently working as a Python backend web developer at Innovative Software Solutions.
           </p>
+
           <!-- About links -->
           <section class="about-links">
-            Interested? <a href="#contact" class="highlight underline-on-hover about-links">Let's get in touch!</a> <br>
-            Not convinced yet? <a href="#projects" class="highlight underline-on-hover about-links">Check out my
-              projects!</a> <br>
-            Want to learn more about me? <a href="https://thumbs.dreamstime.com/b/sticky-todo-11106198.jpg"
-              class="highlight underline-on-hover about-links">Download my resume!</a>
+
+            Interested? 
+            <a href="#contact" class="highlight underline-on-hover about-links">
+              Let's get in touch!
+            </a>
+            <br>
+
+            Not convinced yet? 
+            <a href="#projects" class="highlight underline-on-hover about-links">
+              Check out my projects!
+            </a> 
+            <br>
+
+            Want to learn more about me? 
+            <a href="https://thumbs.dreamstime.com/b/sticky-todo-11106198.jpg"
+              class="highlight underline-on-hover about-links">
+              Download my resume!
+            </a>
+
           </section>
         </div>
+
       </div>
     </section>
+    
     <div class="spacer"></div>
+    
     <!-- Skills section -->
     <section id="skills" class="main-section">
       <h2 class="section-header animate-on-scroll">Skills</h2>
+      
       <!-- Grid of single skills -->
       <ul class="skills-container animate-on-scroll">
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-html5-brands" title="HTML"></i>
           <p>HTML</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-css3-alt-brands"></i>
           <p>CSS</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-javascript"></i>
           <p>JavaScript</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-python"></i>
           <p>Python</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-node-brands"></i>
           <p>Node.js</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-react"></i>
           <p>React</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-django"></i>
           <p>Django</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-database-solid"></i>
           <p>SQL</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-mongodb"></i>
           <p>mongoDB</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-git"></i>
           <p>git</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-adobexd"></i>
           <p>Adobe XD</p>
         </li>
+
         <li class="single-skill">
           <i class="highlight-on-hover icon-question"></i>
           <p>TODO</p>
         </li>
+        
       </ul>
     </section>
+
     <div class="spacer"></div>
+    
     <!-- Projects section -->
     <section id="projects" class="main-section">
       <h2 class="section-header animate-on-scroll">Projects</h2>
+      
       <div class="projects-container">
-        <!-- A project -->
+
         <div class="single-project">
+
           <!-- Project display -->
           <section class="project-half project-dp animate-on-scroll left-half left-slide-in">
+
             <div class="project-display">
               <img src="./media/IMac_vector.svg" alt="monitor" class="project-monitor">
               <img src="./media/projects/project-1-thumbnail.png" data-gif-path="./media/projects/project-1.gif"
                 data-thumbnail-path="./media/projects/project-1-thumbnail.png" alt="project-1" class="project-gif" />
             </div>
+            
           </section>
+
           <!-- Project description -->
           <section class="project-half project-txt animate-on-scroll right-half right-slide-in">
+
             <div class="project-details">
+
               <h3>Example project 1</h3>
               <p>
                 Description of the project. Lorem ipsum dolor sit amet
@@ -167,32 +225,41 @@
                 laudantium sed quis nobis modi iusto alias dolorum magnam
                 provident?
               </p>
+              
               <!-- Made With -->
               <div class="made-with">
                 <h4>Made with</h4>
                 <ul class="list-of-icons">
-                  <li><i class="highlight-on-hover icon-html5-brands" title="HTML"></i></i></li>
-                  <li><i class="highlight-on-hover icon-css3-alt-brands" title="CSS"></i></i></li>
-                  <li><i class="highlight-on-hover icon-react" title="React"></i></i></li>
-                  <li><i class="highlight-on-hover icon-node-brands" title="Node.js"></i></i></li>
+                  <li><i class="highlight-on-hover icon-html5-brands" title="HTML"></i></li>
+                  <li><i class="highlight-on-hover icon-css3-alt-brands" title="CSS"></i></li>
+                  <li><i class="highlight-on-hover icon-react" title="React"></i></li>
+                  <li><i class="highlight-on-hover icon-node-brands" title="Node.js"></i></li>
                 </ul>
               </div>
+
               <!-- Links to project -->
               <div class="project-links">
+                
                 <a href="https://www.github.com" target="_blank" class="underline-animated-btn">
-                  GitHub</a>
+                  GitHub
+                </a>
                 <span>|</span>
                 <a href="https://www.google.com" target="_blank" class="underline-animated-btn">
-                  Live Site</a>
+                  Live Site
+                </a>
+
               </div>
+
             </div>
+
           </section>
         </div>
-        <!-- A project -->
+
         <div class="single-project">
           <!-- Project description -->
           <section class="project-half project-txt animate-on-scroll left-half left-slide-in">
             <div class="project-details">
+
               <h3>Example project 2</h3>
               <p>
                 Description of the project. Lorem ipsum dolor sit amet
@@ -201,67 +268,89 @@
                 laudantium sed quis nobis modi iusto alias dolorum magnam
                 provident?
               </p>
+
               <!-- Made With -->
               <div class="made-with">
                 <h4>Made with</h4>
                 <ul class="list-of-icons">
-                  <li><i class="highlight-on-hover icon-html5-brands" title="HTML"></i></i></li>
-                  <li><i class="highlight-on-hover icon-css3-alt-brands" title="CSS"></i></i></li>
-                  <li><i class="highlight-on-hover icon-react" title="React"></i></i></li>
-                  <li><i class="highlight-on-hover icon-node-brands" title="Node.js"></i></i></li>
+                  <li><i class="highlight-on-hover icon-html5-brands" title="HTML"></i></li>
+                  <li><i class="highlight-on-hover icon-css3-alt-brands" title="CSS"></i></li>
+                  <li><i class="highlight-on-hover icon-react" title="React"></i></li>
+                  <li><i class="highlight-on-hover icon-node-brands" title="Node.js"></i></li>
                 </ul>
               </div>
+
               <!-- Links to project -->
               <div class="project-links">
+
                 <a href="https://www.github.com" target="_blank" class="underline-animated-btn">
-                  GitHub</a>
+                  GitHub
+                </a>
                 <span>|</span>
                 <a href="https://www.google.com" target="_blank" class="underline-animated-btn">
-                  Live Site</a>
+                  Live Site
+                </a>
+
               </div>
             </div>
           </section>
+
           <!-- Project display -->
           <section class="project-half project-dp animate-on-scroll right-half right-slide-in">
             <div class="project-display">
+
               <img src="./media/IMac_vector.svg" alt="monitor" class="project-monitor">
               <img src="./media/projects/project-1-thumbnail.png" data-gif-path="./media/projects/project-1.gif"
                 data-thumbnail-path="./media/projects/project-1-thumbnail.png" alt="project-1" class="project-gif" />
+
             </div>
           </section>
+
         </div>
+
       </div>
     </section>
   </div>
+
   <div class="spacer"></div>
+
   <!-- Contact section -->
   <section id="contact" class="main-section">
+    
     <h2 class="section-header animate-on-scroll">Contact</h2>
+    
     <div class="form-container">
+      
       <!-- Contact form -->
       <form class="contact-form animate-on-scroll" action="https://getform.io/f/e031a61c-b4ad-4fc8-b45e-a8b8b82d22f6"
         method="POST" autocomplete="off">>
+       
         <p>
           Have a question or want to work together? Let's get in touch!
         </p>
+        
         <!-- Contact form inputs -->
         <input type="email" autocomplete="off" name="your-email" placeholder="YOUR EMAIL" />
         <input type="text" name="your-name" autocomplete="off" placeholder="YOUR NAME" />
         <textarea name="message" placeholder="YOUR MESSAGE" rows="6"></textarea>
-        
         <div class="g-recaptcha" data-theme="dark" data-sitekey="6LcAuO4eAAAAABReS4QXjImWOvtvAiScAZ918KuN"></div>
         <button type="submit" class="submit-btn underline-animated-btn">Send</button>
+      
       </form>
+
     </div>
   </section>
+
   <!-- Footer -->
   <footer>
+
     <a href="#" class="back-to-top">
       <i class="icon-angles-up-solid"></i>
     </a>
 
     <!-- Footer icons -->
     <section class="social-media-icons">
+
       <a href="https://www.github.com/utrox" target="_blank">
         <i class="icon-github top-icon"></i>
         <i class="icon-github bottom-icon"></i>
@@ -270,20 +359,17 @@
       <a onclick="copyEmailAdress(event)">
         <i class="icon-envelope-solid top-icon"></i>
         <i class="icon-envelope-solid bottom-icon"></i>
-
       </a>
+
       <a href="https://thumbs.dreamstime.com/b/sticky-todo-11106198.jpg" target="_blank">
         <i class="icon-linkedin2 top-icon"></i>
         <i class="icon-linkedin2 bottom-icon"></i>
       </a>
 
     </section>
+
     <section class="copyright"><span class="highlight">Bence Hunyadi</span> &copy; 2022</p>
+
   </footer>
 </body>
-<!-- https://stackoverflow.com/questions/46008760/how-to-build-multiple-language-website-using-pure-html-js-jquery -->
-<script src="hero-connecting-dots.js"></script>
-<script src="background-connecting-dots.js"></script>
-<script src="index.js"></script>
-
 </html>
