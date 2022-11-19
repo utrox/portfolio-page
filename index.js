@@ -37,27 +37,27 @@ document.addEventListener("scroll", handleScroll);
 
 const projectGifs = document.querySelectorAll(".project-gif");
 projectGifs.forEach((gif) => {
-  // when mouse enters a project image, start the gif.
+  // When mouse hovers over project image, start the GIF.
   if (gif.dataset.gifPath) {
     gif.addEventListener("mouseenter", () => {
       gif.src = gif.dataset.gifPath;
     });
 
-    // when mouse leaves a project image, stop the gif.
+    // When mouse leaves a project image, stop the GIF.
     gif.addEventListener("mouseleave", () => {
       gif.src = gif.dataset.thumbnailPath;
     });
   }
 });
 
-// add an increasing transition delay to each skill icon.
+// Add an increasing transition delay to each skill icon.
 const skills = document.querySelectorAll(".single-skill");
 const skillsTransitionDelay = 0.15;
 skills.forEach((element, index) => {
   element.style.transitionDelay = `${index * skillsTransitionDelay}s`;
 });
 
-// change icon of button, and copy email adress to clipboard
+// Change icon of button, and copy email adress to clipboard
 function copyEmailAdress(e) {
   const copyEmailBtn = e.currentTarget;
   const emailIcons = copyEmailBtn.querySelectorAll("i");
