@@ -3,7 +3,7 @@ Original inspiration:
 https://codepen.io/MathiasBerwig/pen/GopGVq
 */
 
-const activeIntervals = [];
+var activeIntervals = [];
 
 class Dot {
   constructor(canvas, ctx) {
@@ -97,7 +97,7 @@ const setupCanvas = (elementId, colorDots, colorLine, lineWidth) => {
 
 const initDots = ({
   elementId,
-  dotDensity = 80,
+  dotDensity = 85,
   colorDots = "#CECECE",
   colorLine = "rgba(0, 181, 255, 1)",
   widthLine = 0.2,
@@ -113,7 +113,7 @@ const initDots = ({
   );
 
   noDots = Math.round(
-    (window.innerWidth * window.innerHeight * dotDensity) / 300000
+    (window.innerWidth * window.innerHeight * dotDensity) / 500000
   );
   console.log("noDots ", noDots);
 
@@ -160,10 +160,17 @@ const reloadDots = () => {
   // Clear every interval, and create new canvases with
   // the appropriate amount of dots, and correct displacement.
   activeIntervals.forEach((interval) => clearInterval(interval));
+  activeIntervals = [];
 
-  activeIntervals.push(
-    initDots({ elementId: "hero-canvas", mouseActive: true })
-  );
+  loadDots();
+};
+
+loadDots = () => {
+  if (window.innerWidth > 650) {
+    activeIntervals.push(
+      initDots({ elementId: "hero-canvas", mouseActive: true })
+    );
+  }
 
   activeIntervals.push(
     initDots({ elementId: "background-canvas", mouseActive: false })
@@ -171,4 +178,4 @@ const reloadDots = () => {
 };
 
 window.addEventListener("resize", reloadDots);
-reloadDots();
+loadDots();
